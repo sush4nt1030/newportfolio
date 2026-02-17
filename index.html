@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sushant Budha Chhetri | Creative Director & Founder of Twilr Production. Premium creative agency specializing in graphic design, video production, web design, and brand strategy.">
+  <meta name="keywords" content="Sushant Budha Chhetri, Twilr Production, creative director, graphic design, video production, web design, brand strategy, creative agency">
+  <meta name="author" content="Sushant Budha Chhetri">
+  <meta property="og:title" content="Sushant Budha Chhetri | Creative Director - Twilr Production">
+  <meta property="og:description" content="Premium creative solutions for ambitious brands. Graphic design, video, web, and strategy.">
+  <meta property="og:type" content="website">
+  <title>Sushant Budha Chhetri | Twilr Production - Creative Director</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0a0a0a;
+      --secondary: #ffffff;
+      --neutral-50: #fafafa;
+      --neutral-100: #f5f5f5;
+      --neutral-200: #e8e8e8;
+      --neutral-300: #ddd;
+      --neutral-600: #666;
+      --neutral-700: #444;
+      --text-primary: #0a0a0a;
+      --text-secondary: #555;
+      --text-tertiary: #888;
+      --accent: #1a5fff;
+      --accent-light: #e8f2ff;
+      --accent-dark: #0d3dbf;
+      --success: #10b981;
+      --border: #e5e5e5;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--secondary);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Crimson Text', serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(2.8rem, 10vw, 5.5rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(2rem, 6vw, 3.5rem); letter-spacing: -0.01em; }
+    h3 { font-size: 1.5rem; letter-spacing: -0.005em; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.1rem; }
+
+    a { color: inherit; text-decoration: none; transition: color 0.3s ease; }
+    p { margin: 0; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideInLeft { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes slideInRight { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+    /* NAVIGATION */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .navbar.scrolled {
+      border-bottom-color: var(--border);
+      box-shadow: var(--shadow-sm);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .navbar-wrapper {
+      max-width: 1800px;
+      margin: 0 auto;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .navbar-brand {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .navbar-brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+      color: var(--text-primary);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .nav-link:hover {
+      color: var(--accent);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      transition: all 0.3s ease;
+      border-radius: 1px;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        background: var(--secondary);
+        border-bottom: 1px solid var(--border);
+        display: none;
+      }
+      .nav-menu.active { display: flex; }
+      .nav-link {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-link::after { display: none; }
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 32px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      letter-spacing: 0.02em;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--secondary);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent);
+      box-shadow: 0 12px 32px rgba(26, 95, 255, 0.3);
+    }
+
+    .btn-secondary {
+      background: var(--accent-light);
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--accent);
+      border: none;
+    }
+
+    .btn-ghost:hover {
+      color: var(--accent-dark);
+    }
+
+    /* CARDS */
+    .card {
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 4rem 1.5rem;
+      }
+    }
+
+    .container {
+      max-width: 1800px;
+      margin: 0 auto;
+    }
+
+    .container-xl {
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .section-title {
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 120px 2rem 6rem;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(26, 95, 255, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      animation: slideInLeft 0.8s ease-out forwards;
+    }
+
+    .hero-headline {
+      font-size: clamp(3.5rem, 12vw, 5.5rem);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+      animation: slideInLeft 0.8s ease-out 0.1s forwards;
+      opacity: 0;
+    }
+
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 650px;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      animation: slideInLeft 0.8s ease-out 0.2s forwards;
+      opacity: 0;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      animation: slideInLeft 0.8s ease-out 0.3s forwards;
+      opacity: 0;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 100px 1.5rem 4rem;
+        min-height: 100%;
+      }
+      .hero::before {
+        width: 400px;
+        height: 400px;
+        right: -50%;
+      }
+      .hero-ctas {
+        flex-direction: column;
+      }
+      .btn { width: 100%; }
+    }
+
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      margin-bottom: 4rem;
+      position: relative;
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+    .timeline-item:nth-child(5) { animation-delay: 0.5s; }
+
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-left: 0;
+      margin-right: auto;
+      width: 48%;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+      margin-left: auto;
+      margin-right: 0;
+      width: 48%;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 24px;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      background: var(--secondary);
+      border: 3px solid var(--border);
+      border-radius: 50%;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .timeline-item:hover .timeline-dot {
+      border-color: var(--accent);
+      background: var(--accent);
+      box-shadow: 0 0 0 12px rgba(26, 95, 255, 0.1);
+      transform: translateX(-50%) scale(1.4);
+    }
+
+    .timeline-content {
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .timeline-item:hover .timeline-content {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .timeline-date {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .timeline-description {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .timeline-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.4rem 0.8rem;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 4px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    @media (max-width: 1024px) {
+      .timeline::before { left: 24px; }
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 80px;
+        margin-right: auto;
+        width: calc(100% - 80px);
+      }
+      .timeline-dot { left: 24px; }
+    }
+
+    @media (max-width: 640px) {
+      .timeline { padding: 1rem 0; }
+      .timeline::before { left: 12px; }
+      .timeline-item { margin-bottom: 2.5rem; }
+      .timeline-item:nth-child(odd) .timeline-content,
+      .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 60px;
+        width: calc(100% - 60px);
+        padding: 1.5rem;
+      }
+      .timeline-dot { left: 12px; top: 18px; }
+    }
+
+    /* MODALS */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      animation: fadeIn 0.3s ease-out;
+      backdrop-filter: blur(4px);
+    }
+
+    .modal {
+      background: var(--secondary);
+      border-radius: 12px;
+      max-width: 800px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: scaleIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-header {
+      padding: 2rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: all 0.3s ease;
+      padding: 0;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-close:hover {
+      color: var(--text-primary);
+      transform: rotate(90deg);
+    }
+
+    .modal-body {
+      padding: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .modal {
+        max-width: 100%;
+        border-radius: 16px;
+        max-height: calc(100vh - 2rem);
+      }
+      .modal-header { padding: 1.5rem; }
+      .modal-body { padding: 1.5rem; }
+    }
+
+    /* GRIDS */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+    @media (max-width: 1024px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    /* PORTFOLIO */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .portfolio-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-image {
+      width: 100%;
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, var(--accent-light) 0%, var(--neutral-100) 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .portfolio-card:hover .portfolio-image {
+      transform: scale(0.96);
+    }
+
+    .portfolio-category {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .portfolio-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* SERVICE CARDS */
+    .service-card {
+      padding: 2.5rem;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: var(--accent);
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--accent);
+      color: white;
+      transform: scale(1.1);
+    }
+
+    .service-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+
+    .service-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-arrow {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.9rem;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover .service-arrow {
+      gap: 1rem;
+    }
+
+    /* FORMS */
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.875rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      background: var(--secondary);
+      color: var(--text-primary);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(26, 95, 255, 0.1);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 140px;
+      font-size: 0.95rem;
+    }
+
+    /* TOAST NOTIFICATIONS */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: var(--shadow-lg);
+      z-index: 3000;
+      animation: slideInRight 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      max-width: 400px;
+      min-width: 300px;
+    }
+
+    .toast.success {
+      border-left: 4px solid var(--success);
+    }
+
+    .toast.error {
+      border-left: 4px solid #ef4444;
+    }
+
+    .toast-message {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    @media (max-width: 640px) {
+      .toast {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        left: 1.5rem;
+        max-width: none;
+      }
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border);
+      background: var(--neutral-50);
+    }
+
+    .footer-wrapper {
+      max-width: 1800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-link {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .footer-link:hover {
+      color: var(--accent);
+      transform: translateX(4px);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--neutral-100);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+    }
+
+    .social-icon:hover {
+      background: var(--accent);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+    }
+
+    @media (max-width: 768px) {
+      footer {
+        padding: 3rem 1.5rem;
+      }
+      .footer-bottom {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    /* 404 PAGE */
+    .not-found-container {
+      position: relative;
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
+      overflow: hidden;
+    }
+
+    .not-found-container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(26, 95, 255, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: float 20s ease-in-out infinite;
+    }
+
+    .not-found-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .not-found-code {
+      font-size: clamp(5rem, 20vw, 12rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 1rem;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    .not-found-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .not-found-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.1s forwards;
+      opacity: 0;
+    }
+
+    .not-found-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      animation: fadeInUp 0.8s ease-out 0.2s forwards;
+      opacity: 0;
+    }
+
+    /* UTILITIES */
+    .hidden { display: none !important; }
+    .p-4 { padding: 2rem; }
+    .p-6 { padding: 2.5rem; }
+    .p-8 { padding: 3rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mt-4 { margin-top: 1rem; }
+    .text-center { text-align: center; }
+    .space-y-4 > * + * { margin-top: 1rem; }
+    .space-y-6 > * + * { margin-top: 1.5rem; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* SCROLL ANIMATIONS */
+    .scroll-animate {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-wrapper">
+      <div class="navbar-brand" onclick="navigateTo('home')" role="button" tabindex="0" aria-label="Sushant Budha Chhetri - Home">Twilr</div>
+      
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li><a class="nav-link" onclick="navigateTo('home')">Home</a></li>
+        <li><a class="nav-link" onclick="navigateTo('about')">About</a></li>
+        <li><a class="nav-link" onclick="navigateTo('services')">Services</a></li>
+        <li><a class="nav-link" onclick="navigateTo('portfolio')">Portfolio</a></li>
+        <li><a class="nav-link" onclick="navigateTo('experience')">Experience</a></li>
+        <li><a class="nav-link" onclick="navigateTo('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <div id="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="container-xl">
+        <div class="hero-content">
+          <p class="hero-label">Creative Director & Founder</p>
+          <h1 class="hero-headline">Sushant Budha Chhetri</h1>
+          <p class="hero-tagline">
+            Founder of Twilr Production. I craft compelling visual experiences and strategic creative solutions for ambitious brands that demand excellence.
+          </p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" onclick="navigateTo('portfolio')">View Portfolio</button>
+            <button class="btn btn-secondary" onclick="navigateTo('services')">Explore Services</button>
+            <button class="btn btn-outline" onclick="navigateTo('contact')">Get In Touch</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container-xl">
+        <p class="section-label">Background</p>
+        <h2 class="section-title">My Story</h2>
+        <p class="section-subtitle">From creative exploration to strategic thinking. Building a sustainable practice focused on meaningful work and authentic connections.</p>
+
+        <div class="space-y-6 mb-6" style="max-width: 900px; margin-bottom: 4rem;">
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+            My journey began with curiosity about design and visual communication. In 2019, I started exploring graphic design tools, discovering how thoughtful design shapes perception and drives engagement. What began as creative exploration has evolved into a comprehensive practice spanning graphic design, motion, web development, and strategic thinking.
+          </p>
+          
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+            Over the past several years, I've worked with startups, agencies, and established brands—learning that great creative work requires both artistic excellence and strategic clarity. Every project is an opportunity to understand the client's vision, challenge assumptions, and deliver solutions that genuinely move the needle.
+          </p>
+
+          <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+            In 2023, I founded Twilr Production to bring all of these skills together into a cohesive offering. Today, we work with ambitious clients on high-impact creative projects that combine beauty with business results.
+          </p>
+        </div>
+
+        <h3 style="margin-bottom: 2rem;">Professional Timeline</h3>
+        <div class="timeline" id="about-timeline">
+          <!-- Generated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section style="background: var(--neutral-100);">
+      <div class="container-xl">
+        <p class="section-label">Agency</p>
+        <h2 class="section-title">About Twilr Production</h2>
+
+        <div class="grid-2" style="margin-bottom: 4rem;">
+          <div>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">
+              Twilr Production is a full-service creative agency dedicated to helping ambitious brands tell their stories authentically. Founded in 2023, we specialize in graphic design, video production, web design, and brand strategy for clients who demand excellence.
+            </p>
+            
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+              The name captures that magical twilight moment—infinite possibility where day meets night. It represents our approach: where strategic thinking meets creative excellence, where brand meets business, where vision becomes reality.
+            </p>
+          </div>
+
+          <div>
+            <div class="card p-6" style="background: white;">
+              <h4 style="margin-bottom: 1.5rem;">By The Numbers</h4>
+              <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div>
+                  <p style="color: var(--accent); font-size: 2rem; font-weight: 700;">10+</p>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem;">Years of Creative Experience</p>
+                </div>
+                <div>
+                  <p style="color: var(--accent); font-size: 2rem; font-weight: 700;">50+</p>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem;">Projects Delivered</p>
+                </div>
+                <div>
+                  <p style="color: var(--accent); font-size: 2rem; font-weight: 700;">30+</p>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem;">Active Clients</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card p-6" onclick="openModal('vision-modal')" style="cursor: pointer;">
+            <p class="section-label">Vision</p>
+            <h4 style="margin-bottom: 1rem;">Transform Brand Connections</h4>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Through creative excellence and strategic clarity, we help brands make authentic, lasting connections with their audiences.</p>
+          </div>
+          <div class="card p-6" onclick="openModal('mission-modal')" style="cursor: pointer;">
+            <p class="section-label">Mission</p>
+            <h4 style="margin-bottom: 1rem;">Deliver Strategic Solutions</h4>
+            <p style="color: var(--text-secondary); line-height: 1.7;">Premium creative work that combines beauty, strategy, and business results for ambitious, discerning clients.</p>
+          </div>
+          <div class="card p-6" onclick="openModal('values-modal')" style="cursor: pointer;">
+            <p class="section-label">Values</p>
+            <h4 style="margin-bottom: 1rem;">Excellence & Authenticity</h4>
+            <p style="color: var(--text-secondary); line-height: 1.7;">We believe in intentional work, strategic thinking, and solutions that actually move the needle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container-xl">
+        <p class="section-label">What I Offer</p>
+        <h2 class="section-title">Services & Solutions</h2>
+        <p class="section-subtitle">Premium creative services designed to elevate your brand and drive measurable results.</p>
+
+        <div class="grid-3" id="services-grid">
+          <!-- Generated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" style="background: var(--neutral-100);">
+      <div class="container-xl">
+        <p class="section-label">Featured Work</p>
+        <h2 class="section-title">Portfolio</h2>
+        <p class="section-subtitle">Selection of projects showcasing strategic thinking and creative excellence.</p>
+
+        <div style="display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; align-items: center;" id="filter-container">
+          <!-- Generated by JavaScript -->
+        </div>
+
+        <div class="portfolio-grid" id="portfolio-grid">
+          <!-- Generated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <div class="container-xl">
+        <p class="section-label">Professional Growth</p>
+        <h2 class="section-title">Experience & Journey</h2>
+        <p class="section-subtitle">Complete timeline showcasing growth, milestones, and professional evolution.</p>
+
+        <div class="timeline" id="experience-timeline">
+          <!-- Generated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: var(--neutral-100);">
+      <div class="container-xl">
+        <p class="section-label">Let's Connect</p>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Ready to discuss your project? I'm available for collaborations and new opportunities.</p>
+
+        <div class="grid-2">
+          <div>
+            <div class="card p-6" style="margin-bottom: 2rem;">
+              <h4 style="margin-bottom: 2rem;">Contact Information</h4>
+              
+              <div style="margin-bottom: 2rem;">
+                <p class="section-label">Email</p>
+                <a href="mailto:hello@twilrproduction.com" style="font-weight: 500; transition: color 0.3s ease;">hello@twilrproduction.com</a>
+              </div>
+
+              <div style="margin-bottom: 2rem;">
+                <p class="section-label">Location</p>
+                <p style="color: var(--text-primary); font-weight: 500;">Available worldwide for remote work</p>
+              </div>
+
+              <div>
+                <p class="section-label">Social Links</p>
+                <div class="footer-social" style="margin-top: 1rem;">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">📷</a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">💼</a>
+                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">𝕏</a>
+                  <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Behance">🎨</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card p-6" style="background: linear-gradient(135deg, var(--accent-light) 0%, var(--secondary) 100%); border: 1px solid var(--accent);">
+              <h4 style="margin-bottom: 1rem; color: var(--accent);">Quick Response</h4>
+              <p style="color: var(--accent); font-size: 0.95rem; line-height: 1.7;">
+                I respond to all inquiries within 24-48 hours. Whether it's a project discussion or collaboration proposal, let's start the conversation.
+              </p>
+            </div>
+          </div>
+
+          <div class="card p-6" style="background: white;">
+            <h4 style="margin-bottom: 2rem;">Send a Message</h4>
+            
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Your full name" autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="inquiry" class="form-label">Inquiry Type (Optional)</label>
+                <select id="inquiry" name="inquiry_type">
+                  <option value="">Select an option...</option>
+                  <option>Graphic Design Project</option>
+                  <option>Video Production</option>
+                  <option>Web Design</option>
+                  <option>Brand Strategy</option>
+                  <option>Social Media Management</option>
+                  <option>Collaboration</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- 404 Page (Hidden by default) -->
+  <div id="not-found-page" class="hidden">
+    <div class="not-found-container">
+      <div class="not-found-content">
+        <div class="not-found-code">404</div>
+        <h1 class="not-found-title">Page Not Found</h1>
+        <p class="not-found-desc">
+          Sorry, the page you're looking for doesn't exist. It might have been moved or the link could be broken. Let's get you back on track.
+        </p>
+        <div class="not-found-actions">
+          <button class="btn btn-primary" onclick="navigateTo('home')">← Back to Home</button>
+          <button class="btn btn-secondary" onclick="navigateTo('portfolio')">View Portfolio</button>
+          <button class="btn btn-outline" onclick="navigateTo('contact')">Get In Touch</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="service-modal" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('service-modal')">
+    <div class="modal">
+      <div class="modal-header">
+        <div id="service-modal-header"></div>
+        <button class="modal-close" onclick="closeModal('service-modal')">&times;</button>
+      </div>
+      <div class="modal-body" id="service-modal-content"></div>
+    </div>
+  </div>
+
+  <div id="project-modal" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('project-modal')">
+    <div class="modal">
+      <div class="modal-header">
+        <div id="project-modal-header"></div>
+        <button class="modal-close" onclick="closeModal('project-modal')">&times;</button>
+      </div>
+      <div class="modal-body" id="project-modal-content"></div>
+    </div>
+  </div>
+
+  <div id="vision-modal" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('vision-modal')">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Our Vision</h3>
+        <button class="modal-close" onclick="closeModal('vision-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+          Transform how brands connect with their audiences through creative excellence and strategic clarity.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.8;">
+          We envision a future where every brand has access to world-class creative solutions that combine artistic beauty with strategic business thinking. Our goal is to be the trusted creative partner for ambitious companies that refuse to compromise on quality.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="mission-modal" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('mission-modal')">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Our Mission</h3>
+        <button class="modal-close" onclick="closeModal('mission-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+          Deliver premium creative solutions that combine beauty, strategy, and measurable business results.
+        </p>
+        <p style="color: var(--text-secondary); line-height: 1.8;">
+          Every project we undertake is guided by a commitment to understanding our clients' business objectives and delivering creative work that drives real outcomes. We believe in strategic thinking paired with artistic excellence.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="values-modal" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('values-modal')">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Our Values</h3>
+        <button class="modal-close" onclick="closeModal('values-modal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="margin-bottom: 2rem;">
+          <h5 style="margin-bottom: 0.5rem; color: var(--accent);">Excellence</h5>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            We never compromise on quality. Every pixel, every word, every decision reflects our commitment to excellence.
+          </p>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <h5 style="margin-bottom: 0.5rem; color: var(--accent);">Authenticity</h5>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            We believe in honest, authentic work that reflects the true nature of our clients' brands.
+          </p>
+        </div>
+        <div>
+          <h5 style="margin-bottom: 0.5rem; color: var(--accent);">Strategy</h5>
+          <p style="color: var(--text-secondary); line-height: 1.7;">
+            Creative work without strategy is just art. We combine both to deliver results that matter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-section">
+        <h4>Twilr Production</h4>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+          Creative agency specializing in design, video, web, and strategy for ambitious brands.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a class="footer-link" onclick="navigateTo('home')">Home</a>
+          <a class="footer-link" onclick="navigateTo('about')">About</a>
+          <a class="footer-link" onclick="navigateTo('services')">Services</a>
+          <a class="footer-link" onclick="navigateTo('portfolio')">Portfolio</a>
+          <a class="footer-link" onclick="navigateTo('contact')">Contact</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">📷</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">💼</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter">𝕏</a>
+          <a href="https://behance.net" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Behance">🎨</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-text">© 2024 Sushant Budha Chhetri • Twilr Production</p>
+      <p class="footer-text">Crafted with excellence and strategic vision</p>
+    </div>
+  </footer>
+
+  <script>
+    // Configuration
+    const defaultConfig = {
+      hero_headline: "Sushant Budha Chhetri",
+      hero_tagline: "Founder of Twilr Production. I craft compelling visual experiences and strategic creative solutions for ambitious brands that demand excellence."
+    };
+
+    let config = { ...defaultConfig };
+    let contactSubmissions = [];
+    let currentPage = 'home';
+
+    // Data
+    const aboutTimeline = [
+      {
+        date: "2019",
+        title: "Creative Discovery",
+        description: "Started exploring graphic design, discovering the power of visual communication. Built foundational skills in Adobe Creative Suite.",
+        tags: ["Design", "Learning"],
+        details: "Completed first personal projects and started learning professional design workflows. This was the foundation for everything that followed."
+      },
+      {
+        date: "2020",
+        title: "Freelance Beginnings",
+        description: "Launched freelance design practice. Completed 20+ projects for diverse clients including local businesses and startups.",
+        tags: ["Freelance", "Branding"],
+        details: "Built portfolio and client base. Learned project management, client communication, and business fundamentals through real-world projects."
+      },
+      {
+        date: "2021",
+        title: "Skill Expansion",
+        description: "Mastered video editing, WordPress development, and social media management. Scaled to 10+ active clients.",
+        tags: ["Video", "Web", "Social"],
+        details: "Diversified skill set to offer comprehensive services. Invested in learning new platforms and staying current with industry trends."
+      },
+      {
+        date: "2022",
+        title: "Leadership & Strategy",
+        description: "Led creative teams at agencies. Managed complex projects and developed strategic campaigns.",
+        tags: ["Leadership", "Strategy"],
+        details: "Transitioned from solo freelancer to team leadership. Gained valuable experience in project management and creative direction."
+      },
+      {
+        date: "2023",
+        title: "Twilr Production Founded",
+        description: "Established full-service creative agency combining all expertise into cohesive offering. Focus on strategic, high-impact work.",
+        tags: ["Founder", "Agency"],
+        details: "Built agency with clear vision and mission. Assembled team, established processes, and began working with ambitious brands."
+      }
+    ];
+
+    const experienceTimeline = [
+      {
+        date: "2019-2020",
+        title: "Graphic Design Freelancer",
+        description: "Started freelance journey with focus on logo design and brand identity. Completed 20+ projects.",
+        tags: ["Freelance", "Design"],
+        details: "Built portfolio and established reputation for quality work. Worked with local businesses and creative startups."
+      },
+      {
+        date: "2020-2021",
+        title: "Video Editor & Content Creator",
+        description: "Expanded services to video production and social content. Managed social media for 10+ brands.",
+        tags: ["Video", "Motion", "Content"],
+        details: "Produced 100+ videos for various clients. Managed social media strategy and content calendars for multiple platforms."
+      },
+      {
+        date: "2021-2022",
+        title: "Web Developer Internship",
+        description: "Completed intensive internship at creative agency. Mastered WordPress and frontend development.",
+        tags: ["WordPress", "Web", "Internship"],
+        details: "Built 15+ client websites. Learned professional development workflows, hosting, and performance optimization."
+      },
+      {
+        date: "2022-2023",
+        title: "Creative Director",
+        description: "Led creative department at digital agency. Managed designer teams and directed strategic campaigns.",
+        tags: ["Leadership", "Direction", "Strategy"],
+        details: "Oversaw all creative projects. Mentored junior designers and developed brand strategies for major clients."
+      },
+      {
+        date: "2023-Present",
+        title: "Founder, Twilr Production",
+        description: "Established and scaled full-service creative agency. 30+ active clients and 50+ delivered projects.",
+        tags: ["Founder", "Leadership", "Agency"],
+        details: "Built agency from ground up. Focused on strategic work for ambitious brands. Assembled talented team."
+      }
+    ];
+
+    const servicesData = [
+      {
+        id: "graphic-design",
+        title: "Graphic Design",
+        subtitle: "Visual identity and brand excellence",
+        icon: "✎",
+        description: "Strategic visual design that communicates your brand message with clarity and elegance. From logos and brand systems to marketing collateral.",
+        workflow: ["Brand discovery", "Concept development", "Design exploration", "Refinement", "Final delivery"],
+        tools: "Adobe Illustrator • Figma • Adobe Photoshop • InDesign",
+        deliverables: "Logos • Brand systems • Print materials • Packaging • Marketing collateral",
+        timeline: "2019-Present"
+      },
+      {
+        id: "video-production",
+        title: "Video Production",
+        subtitle: "Cinematic storytelling with impact",
+        icon: "▶",
+        description: "Professional video production and post-production from concept to final delivery. Motion graphics, color grading, sound design.",
+        workflow: ["Concept & storyboarding", "Filming", "Color grading", "Motion graphics", "Sound design", "Final export"],
+        tools: "Premiere Pro • After Effects • DaVinci Resolve • Audition",
+        deliverables: "Promotional videos • Social content • Corporate videos • Motion graphics",
+        timeline: "2020-Present"
+      },
+      {
+        id: "web-design",
+        title: "Web Design",
+        subtitle: "Digital experiences that convert",
+        icon: "⌐",
+        description: "Custom-designed, high-performing websites combining beautiful aesthetics with strategic user experience. Responsive and optimized for conversions.",
+        workflow: ["Strategy & discovery", "Wireframing", "Design", "Development", "Testing", "Launch"],
+        tools: "WordPress • Figma • HTML/CSS • JavaScript",
+        deliverables: "Custom WordPress sites • Landing pages • E-commerce stores • Portfolio sites",
+        timeline: "2021-Present"
+      },
+      {
+        id: "social-media",
+        title: "Social Media Management",
+        subtitle: "Strategic content and community building",
+        icon: "◉",
+        description: "Comprehensive social strategy including content creation, community management, growth strategy, and performance analytics.",
+        workflow: ["Audit & strategy", "Content planning", "Design & creation", "Scheduling", "Community management", "Analytics"],
+        tools: "Meta Suite • Later • Canva • Google Analytics",
+        deliverables: "Content strategy • Post designs • Growth campaigns • Community management",
+        timeline: "2020-Present"
+      },
+      {
+        id: "brand-strategy",
+        title: "Brand Strategy",
+        subtitle: "Authentic positioning and messaging",
+        icon: "★",
+        description: "Strategic brand development including positioning, identity, voice, visual language, and comprehensive brand guidelines.",
+        workflow: ["Discovery workshop", "Market research", "Positioning", "Identity design", "Guidelines", "Implementation"],
+        tools: "Strategic frameworks • Research • Brand workshops",
+        deliverables: "Brand strategy • Positioning • Visual identity • Brand guidelines",
+        timeline: "2019-Present"
+      },
+      {
+        id: "creative-direction",
+        title: "Creative Direction",
+        subtitle: "Strategic vision and execution",
+        icon: "◊",
+        description: "End-to-end creative direction for campaigns and integrated initiatives. Combining strategic thinking with creative excellence.",
+        workflow: ["Brief & strategy", "Concept development", "Creative direction", "Team coordination", "Quality assurance", "Launch"],
+        tools: "Strategic planning • Team leadership • Project management",
+        deliverables: "Campaign concepts • Creative briefs • Art direction • Launch coordination",
+        timeline: "2022-Present"
+      }
+    ];
+
+    const portfolioData = [
+      {
+        id: "nexus-brand",
+        title: "Nexus Tech - Brand Identity",
+        category: "branding",
+        description: "Complete brand identity for B2B tech startup",
+        emoji: "🎨",
+        details: "Developed comprehensive brand identity including logo system, color palette, typography, photography style, and 80-page brand guidelines.",
+        role: "Lead Brand Designer",
+        year: "2023",
+        tools: "Adobe Illustrator • Figma • Brand Guidelines",
+        outcomes: ["Logo system with 10+ variations", "Complete 80-page brand guidelines", "Marketing templates", "Successful market positioning"]
+      },
+      {
+        id: "bloom-cafe",
+        title: "Bloom Cafe - Website",
+        category: "web",
+        description: "Modern responsive website with reservation system",
+        emoji: "🌐",
+        details: "Designed and developed fully responsive website featuring menu showcase, online ordering, and table reservation system.",
+        role: "Web Designer & Developer",
+        year: "2023",
+        tools: "WordPress • Elementor • WooCommerce • Stripe",
+        outcomes: ["Fully responsive design", "Mobile optimization", "200% increase in online orders", "Improved engagement"]
+      },
+      {
+        id: "fitlife-social",
+        title: "FitLife - Social Campaign",
+        category: "social",
+        description: "Comprehensive social media campaign and strategy",
+        emoji: "📱",
+        details: "Managed complete social media strategy for fitness brand across Instagram, TikTok, YouTube, and Facebook.",
+        role: "Social Media Strategist",
+        year: "2023",
+        tools: "Meta Suite • Canva • Later • Google Analytics",
+        outcomes: ["500K+ impressions", "10K new followers", "15% engagement rate", "Strong brand authority"]
+      },
+      {
+        id: "promo-video",
+        title: "Product Launch - Promo Video",
+        category: "video",
+        description: "Professional 60-second promotional video",
+        emoji: "🎬",
+        details: "Created engaging promotional video with color grading, motion graphics, sound design, and animation.",
+        role: "Video Editor & Motion Designer",
+        year: "2023",
+        tools: "Premiere Pro • After Effects • DaVinci Resolve",
+        outcomes: ["100K+ views", "High engagement rate", "Featured at launch", "Industry recognition"]
+      },
+      {
+        id: "artisan-brand",
+        title: "Artisan - Premium Branding",
+        category: "branding",
+        description: "Luxury brand identity for handcrafted goods",
+        emoji: "✨",
+        details: "Created sophisticated brand identity with logo, color palette, custom typography, and complete brand system.",
+        role: "Brand Designer",
+        year: "2022",
+        tools: "Adobe Illustrator • Figma • InDesign",
+        outcomes: ["Premium visual identity", "Cohesive brand system", "Print & digital assets", "Justified premium pricing"]
+      },
+      {
+        id: "portfolio-site",
+        title: "CreativeX - Portfolio Website",
+        category: "web",
+        description: "High-performance portfolio for creative studio",
+        emoji: "🖼",
+        details: "Designed and developed fast-loading, SEO-optimized portfolio website with case study pages and testimonials.",
+        role: "Web Designer & Developer",
+        year: "2022",
+        tools: "WordPress • Custom Development • Figma",
+        outcomes: ["50% increase in inquiries", "2.1s load time", "SEO optimized", "Award nomination"]
+      }
+    ];
+
+    // Element SDK
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange: (newConfig) => {
+          config = { ...defaultConfig, ...newConfig };
+          const headline = document.querySelector('.hero-headline');
+          if (headline) headline.textContent = config.hero_headline;
+          const tagline = document.querySelector('.hero-tagline');
+          if (tagline) tagline.textContent = config.hero_tagline;
+        },
+        mapToCapabilities: () => ({
+          recolorables: [],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (cfg) => new Map([
+          ['hero_headline', cfg.hero_headline || defaultConfig.hero_headline],
+          ['hero_tagline', cfg.hero_tagline || defaultConfig.hero_tagline]
+        ])
+      });
+    }
+
+    // Data SDK
+    if (window.dataSdk) {
+      window.dataSdk.init({
+        onDataChanged(data) {
+          contactSubmissions = data;
+        }
+      });
+    }
+
+    // Utility Functions
+    function navigateTo(sectionId) {
+      if (sectionId === '404') {
+        showPage('not-found');
+        return;
+      }
+      showPage('main-content');
+      currentPage = sectionId;
+      const element = document.getElementById(sectionId);
+      if (element) {
+        closeMenuMobile();
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function showPage(pageId) {
+      document.getElementById('main-content').classList.toggle('hidden', pageId !== 'main-content');
+      document.getElementById('not-found-page').classList.toggle('hidden', pageId !== 'not-found');
+      document.getElementById('navbar').style.display = pageId === 'main-content' ? 'fixed' : 'none';
+    }
+
+    function closeMenuMobile() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function showToast(message, type = 'success') {
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+      toast.innerHTML = `<div class="toast-message">${message}</div>`;
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(500px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 4000);
+    }
+
+    // Render Functions
+    function renderAboutTimeline() {
+      const container = document.getElementById('about-timeline');
+      if (!container) return;
+      
+      container.innerHTML = aboutTimeline.map((item, index) => `
+        <div class="timeline-item" style="animation-delay: ${index * 0.1}s;">
+          <div class="timeline-dot" onclick="openModal('timeline-modal-${index}')" role="button" tabindex="0"></div>
+          <div class="timeline-content" onclick="openModal('timeline-modal-${index}')" role="button" tabindex="0">
+            <div class="timeline-date">${item.date}</div>
+            <div class="timeline-title">${item.title}</div>
+            <div class="timeline-description">${item.description}</div>
+            <div class="timeline-tags">
+              ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+
+        <div id="timeline-modal-${index}" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('timeline-modal-${index}')">
+          <div class="modal">
+            <div class="modal-header">
+              <div>
+                <h3>${item.title}</h3>
+                <p style="color: var(--accent); font-weight: 600; margin-top: 0.5rem;">${item.date}</p>
+              </div>
+              <button class="modal-close" onclick="closeModal('timeline-modal-${index}')">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">${item.description}</p>
+              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">${item.details}</p>
+              <div class="timeline-tags">
+                ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderExperienceTimeline() {
+      const container = document.getElementById('experience-timeline');
+      if (!container) return;
+      
+      container.innerHTML = experienceTimeline.map((item, index) => `
+        <div class="timeline-item" style="animation-delay: ${index * 0.1}s;">
+          <div class="timeline-dot" onclick="openModal('exp-modal-${index}')" role="button" tabindex="0"></div>
+          <div class="timeline-content" onclick="openModal('exp-modal-${index}')" role="button" tabindex="0">
+            <div class="timeline-date">${item.date}</div>
+            <div class="timeline-title">${item.title}</div>
+            <div class="timeline-description">${item.description}</div>
+            <div class="timeline-tags">
+              ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+
+        <div id="exp-modal-${index}" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('exp-modal-${index}')">
+          <div class="modal">
+            <div class="modal-header">
+              <div>
+                <h3>${item.title}</h3>
+                <p style="color: var(--accent); font-weight: 600; margin-top: 0.5rem;">${item.date}</p>
+              </div>
+              <button class="modal-close" onclick="closeModal('exp-modal-${index}')">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">${item.description}</p>
+              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">${item.details}</p>
+              <div class="timeline-tags">
+                ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderServices() {
+      const grid = document.getElementById('services-grid');
+      if (!grid) return;
+
+      grid.innerHTML = servicesData.map((service, index) => `
+        <div class="card service-card" onclick="openServiceModal(${index})" style="animation: fadeInUp 0.6s ease-out ${index * 0.1}s forwards; opacity: 0;">
+          <div class="service-icon">${service.icon}</div>
+          <h4 class="service-title">${service.title}</h4>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem;">${service.subtitle}</p>
+          <p class="service-desc">${service.description}</p>
+          <button class="service-arrow" style="background: none; border: none; cursor: pointer; padding: 0;">
+            Learn More <span>→</span>
+          </button>
+        </div>
+      `).join('');
+    }
+
+    function renderPortfolio() {
+      const filterContainer = document.getElementById('filter-container');
+      const categories = ['all', ...new Set(portfolioData.map(p => p.category))];
+      
+      filterContainer.innerHTML = categories.map(cat => `
+        <button class="filter-btn ${cat === 'all' ? 'active' : ''}" data-filter="${cat}" onclick="filterPortfolio('${cat}')" style="
+          padding: 0.5rem 1.2rem;
+          border: 1px solid ${cat === 'all' ? 'var(--accent)' : 'var(--border)'};
+          background: ${cat === 'all' ? 'var(--accent-light)' : 'transparent'};
+          color: ${cat === 'all' ? 'var(--accent)' : 'var(--text-secondary)'};
+          border-radius: 6px;
+          cursor: pointer;
+          font-weight: 500;
+          font-size: 0.9rem;
+          transition: all 0.3s ease;
+        " onmouseover="this.style.borderColor='var(--accent)'; this.style.background='var(--accent-light)'; this.style.color='var(--accent)'" onmouseout="this.style.borderColor=this.dataset.filter === 'all' ? 'var(--accent)' : 'var(--border)'; this.style.background=this.dataset.filter === 'all' ? 'var(--accent-light)' : 'transparent'; this.style.color=this.dataset.filter === 'all' ? 'var(--accent)' : 'var(--text-secondary)'" data-filter="${cat}">
+          ${cat.charAt(0).toUpperCase() + cat.slice(1)}
+        </button>
+      `).join('');
+
+      const grid = document.getElementById('portfolio-grid');
+      grid.innerHTML = portfolioData.map((project, index) => `
+        <div class="card portfolio-card" data-category="${project.category}" onclick="openProjectModal(${index})" style="animation: fadeInUp 0.6s ease-out ${index * 0.1}s forwards; opacity: 0; cursor: pointer;">
+          <div class="portfolio-image">${project.emoji}</div>
+          <div style="padding: 1.5rem;">
+            <p class="portfolio-category">${project.category}</p>
+            <h5 class="portfolio-title">${project.title}</h5>
+            <p class="portfolio-desc">${project.description}</p>
+            <a class="service-arrow" style="text-decoration: none;">
+              View Case Study <span>→</span>
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterPortfolio(category) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const isActive = btn.dataset.filter === category;
+        btn.style.background = isActive ? 'var(--accent-light)' : 'transparent';
+        btn.style.color = isActive ? 'var(--accent)' : 'var(--text-secondary)';
+        btn.style.borderColor = isActive ? 'var(--accent)' : 'var(--border)';
+        btn.classList.toggle('active', isActive);
+      });
+
+      document.querySelectorAll('.portfolio-card').forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block';
+          setTimeout(() => item.style.opacity = '1', 10);
+        } else {
+          item.style.opacity = '0';
+          setTimeout(() => item.style.display = 'none', 300);
+        }
+      });
+    }
+
+    function openServiceModal(index) {
+      const service = servicesData[index];
+      const header = document.getElementById('service-modal-header');
+      const content = document.getElementById('service-modal-content');
+
+      header.innerHTML = `<h3>${service.title}</h3>`;
+      content.innerHTML = `
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem; font-size: 1.05rem;">${service.description}</p>
+
+        <h5 style="margin-bottom: 1rem; margin-top: 2rem;">How It Works</h5>
+        <ol style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+          ${service.workflow.map(step => `<li style="margin-bottom: 0.75rem;"><strong>${step}</strong></li>`).join('')}
+        </ol>
+
+        <div class="grid-2" style="margin-top: 2rem; gap: 2rem;">
+          <div>
+            <h5 style="margin-bottom: 1rem;">Tools & Platforms</h5>
+            <p style="color: var(--text-secondary); line-height: 1.7;">${service.tools}</p>
+          </div>
+          <div>
+            <h5 style="margin-bottom: 1rem;">What You'll Receive</h5>
+            <p style="color: var(--text-secondary); line-height: 1.7;">${service.deliverables}</p>
+          </div>
+        </div>
+
+        <div style="background: var(--accent-light); padding: 2rem; border-radius: 8px; margin-top: 2rem; border: 1px solid var(--accent);">
+          <p style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Ready to Start?</p>
+          <p style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.7;">Let's discuss how this service can elevate your project and deliver results.</p>
+          <button class="btn btn-primary" onclick="closeModal('service-modal'); navigateTo('contact');">Get In Touch</button>
+        </div>
+      `;
+
+      openModal('service-modal');
+    }
+
+    function openProjectModal(index) {
+      const project = portfolioData[index];
+      const header = document.getElementById('project-modal-header');
+      const content = document.getElementById('project-modal-content');
+
+      header.innerHTML = `<h3>${project.title}</h3>`;
+      content.innerHTML = `
+        <div style="width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--accent-light) 0%, var(--neutral-100) 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 5rem; margin-bottom: 2rem;">
+          ${project.emoji}
+        </div>
+
+        <div class="grid-2" style="gap: 2rem; margin-bottom: 2rem;">
+          <div>
+            <h5 style="margin-bottom: 1rem; color: var(--text-primary);">Project Overview</h5>
+            <p style="color: var(--text-secondary); line-height: 1.8;">${project.details}</p>
+          </div>
+          <div style="background: var(--neutral-100); padding: 1.5rem; border-radius: 8px;">
+            <div style="margin-bottom: 1.5rem;">
+              <p class="section-label">Role</p>
+              <p style="color: var(--text-primary); font-weight: 500;">${project.role}</p>
+            </div>
+            <div style="margin-bottom: 1.5rem;">
+              <p class="section-label">Year</p>
+              <p style="color: var(--text-primary); font-weight: 500;">${project.year}</p>
+            </div>
+            <div>
+              <p class="section-label">Tools</p>
+              <p style="color: var(--text-secondary); font-size: 0.95rem;">${project.tools}</p>
+            </div>
+          </div>
+        </div>
+
+        <h5 style="margin-bottom: 1rem; margin-top: 2rem;">Key Outcomes</h5>
+        <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
+          ${project.outcomes.map(outcome => `<li style="margin-bottom: 0.75rem;">${outcome}</li>`).join('')}
+        </ul>
+
+        <div style="background: var(--accent-light); padding: 2rem; border-radius: 8px; margin-top: 2rem; border: 1px solid var(--accent); text-align: center;">
+          <p style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Interested?</p>
+          <p style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 0.95rem;">Like what you see? Let's discuss how I can deliver similar results for your project.</p>
+          <button class="btn btn-primary" onclick="closeModal('project-modal'); navigateTo('contact');">Start a Project</button>
+        </div>
+      `;
+
+      openModal('project-modal');
+    }
+
+    // Contact Form
+    function setupContactForm() {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const inquiry_type = document.getElementById('inquiry').value;
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+          showToast('Please fill in all required fields.', 'error');
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          showToast('Please enter a valid email address.', 'error');
+          return;
+        }
+
+        if (window.dataSdk && contactSubmissions.length < 999) {
+          const btn = form.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          btn.textContent = 'Sending...';
+
+          const result = await window.dataSdk.create({
+            name,
+            email,
+            inquiry_type,
+            message,
+            submittedAt: new Date().toISOString()
+          });
+
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+
+          if (result.isOk) {
+            showToast('Message sent successfully! I\'ll be in touch soon.', 'success');
+            form.reset();
+          } else {
+            showToast('Failed to send message. Please try again.', 'error');
+          }
+        }
+      });
+    }
+
+    // Navigation Setup
+    function setupNavigation() {
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('nav-menu');
+      const navbar = document.getElementById('navbar');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        hamburger.setAttribute('aria-expanded', hamburger.classList.contains('active'));
+      });
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+    }
+
+    // Scroll Animation Observer
+    function setupScrollAnimations() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
+    }
+
+    // Keyboard Navigation for Modals
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay').forEach(modal => {
+          if (!modal.classList.contains('hidden')) {
+            closeModal(modal.id);
+          }
+        });
+      }
+    });
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      setupNavigation();
+      setupContactForm();
+      renderAboutTimeline();
+      renderExperienceTimeline();
+      renderServices();
+      renderPortfolio();
+      setupScrollAnimations();
+    });
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cf43d60c4224365',t:'MTc3MTMyMDM1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
