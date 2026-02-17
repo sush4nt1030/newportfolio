@@ -9,8 +9,10 @@
   <meta property="og:title" content="Sushant Budha Chhetri | Creative Director - Twilr Production">
   <meta property="og:description" content="Premium creative solutions for ambitious brands. Graphic design, video, web, and strategy.">
   <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Sushant Budha Chhetri | Twilr Production - Creative Director</title>
-  <script src="/_sdk/element_sdk.js"></script>
   <script src="/_sdk/data_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -54,6 +56,7 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -81,7 +84,7 @@
     @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }
     @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-    /* NAVIGATION */
+    /* NAVBAR */
     .navbar {
       position: fixed;
       top: 0;
@@ -204,6 +207,8 @@
         background: var(--secondary);
         border-bottom: 1px solid var(--border);
         display: none;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
       }
       .nav-menu.active { display: flex; }
       .nav-link {
@@ -575,6 +580,7 @@
       padding: 2rem;
       animation: fadeIn 0.3s ease-out;
       backdrop-filter: blur(4px);
+      overflow-y: auto;
     }
 
     .modal {
@@ -586,6 +592,7 @@
       overflow-y: auto;
       animation: scaleIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
       box-shadow: var(--shadow-lg);
+      margin: auto;
     }
 
     .modal-header {
@@ -610,6 +617,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
     .modal-close:hover {
@@ -625,7 +633,7 @@
       .modal {
         max-width: 100%;
         border-radius: 16px;
-        max-height: calc(100vh - 2rem);
+        max-height: 90vh;
       }
       .modal-header { padding: 1.5rem; }
       .modal-body { padding: 1.5rem; }
@@ -673,6 +681,7 @@
     .portfolio-card {
       position: relative;
       overflow: hidden;
+      cursor: pointer;
     }
 
     .portfolio-image {
@@ -921,6 +930,7 @@
       color: var(--text-secondary);
       transition: all 0.3s ease;
       font-size: 1.2rem;
+      text-decoration: none;
     }
 
     .social-icon:hover {
@@ -930,6 +940,8 @@
     }
 
     .footer-bottom {
+      max-width: 1800px;
+      margin: 0 auto;
       padding-top: 2rem;
       border-top: 1px solid var(--border);
       display: flex;
@@ -954,75 +966,6 @@
       }
     }
 
-    /* 404 PAGE */
-    .not-found-container {
-      position: relative;
-      min-height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      background: linear-gradient(135deg, var(--neutral-50) 0%, var(--neutral-100) 100%);
-      overflow: hidden;
-    }
-
-    .not-found-container::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(26, 95, 255, 0.1) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      animation: float 20s ease-in-out infinite;
-    }
-
-    .not-found-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 600px;
-    }
-
-    .not-found-code {
-      font-size: clamp(5rem, 20vw, 12rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--accent), var(--primary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1;
-      margin-bottom: 1rem;
-      animation: bounce 2s ease-in-out infinite;
-    }
-
-    .not-found-title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--text-primary);
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    .not-found-desc {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 2rem;
-      animation: fadeInUp 0.8s ease-out 0.1s forwards;
-      opacity: 0;
-    }
-
-    .not-found-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      animation: fadeInUp 0.8s ease-out 0.2s forwards;
-      opacity: 0;
-    }
-
     /* UTILITIES */
     .hidden { display: none !important; }
     .p-4 { padding: 2rem; }
@@ -1040,25 +983,13 @@
       outline: 2px solid var(--accent);
       outline-offset: 2px;
     }
-
-    /* SCROLL ANIMATIONS */
-    .scroll-animate {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-
-    .scroll-animate.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
   </style>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
     <div class="navbar-wrapper">
-      <div class="navbar-brand" onclick="navigateTo('home')" role="button" tabindex="0" aria-label="Sushant Budha Chhetri - Home">Twilr</div>
+      <div class="navbar-brand" onclick="scrollToSection('home')" role="button" tabindex="0" aria-label="Sushant Budha Chhetri - Home">Twilr</div>
       
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
@@ -1067,37 +998,37 @@
       </button>
 
       <ul class="nav-menu" id="nav-menu" role="menubar">
-        <li><a class="nav-link" onclick="navigateTo('home')">Home</a></li>
-        <li><a class="nav-link" onclick="navigateTo('about')">About</a></li>
-        <li><a class="nav-link" onclick="navigateTo('services')">Services</a></li>
-        <li><a class="nav-link" onclick="navigateTo('portfolio')">Portfolio</a></li>
-        <li><a class="nav-link" onclick="navigateTo('experience')">Experience</a></li>
-        <li><a class="nav-link" onclick="navigateTo('contact')">Contact</a></li>
+        <li><a class="nav-link" onclick="scrollToSection('home')">Home</a></li>
+        <li><a class="nav-link" onclick="scrollToSection('about')">About</a></li>
+        <li><a class="nav-link" onclick="scrollToSection('services')">Services</a></li>
+        <li><a class="nav-link" onclick="scrollToSection('portfolio')">Portfolio</a></li>
+        <li><a class="nav-link" onclick="scrollToSection('experience')">Experience</a></li>
+        <li><a class="nav-link" onclick="scrollToSection('contact')">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Main Content Container -->
-  <div id="main-content">
+  <!-- Main Content -->
+  <main id="main-content">
     <!-- Hero Section -->
-    <section id="hero" class="hero">
+    <section id="home" class="hero">
       <div class="container-xl">
         <div class="hero-content">
           <p class="hero-label">Creative Director & Founder</p>
           <h1 class="hero-headline">Sushant Budha Chhetri</h1>
           <p class="hero-tagline">
-            Founder of Twilr Production. I craft compelling visual experiences and strategic creative solutions for ambitious brands that demand excellence.
+            Founder of Twilr Production. I craft compelling visual experiences and strategic creative solutions for ambitious brands that demand excellence. From concept to execution, combining beauty with business results.
           </p>
           <div class="hero-ctas">
-            <button class="btn btn-primary" onclick="navigateTo('portfolio')">View Portfolio</button>
-            <button class="btn btn-secondary" onclick="navigateTo('services')">Explore Services</button>
-            <button class="btn btn-outline" onclick="navigateTo('contact')">Get In Touch</button>
+            <button class="btn btn-primary" onclick="scrollToSection('portfolio')">View Portfolio</button>
+            <button class="btn btn-secondary" onclick="scrollToSection('services')">Explore Services</button>
+            <button class="btn btn-outline" onclick="scrollToSection('contact')">Get In Touch</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Me Section -->
     <section id="about">
       <div class="container-xl">
         <p class="section-label">Background</p>
@@ -1106,19 +1037,19 @@
 
         <div class="space-y-6 mb-6" style="max-width: 900px; margin-bottom: 4rem;">
           <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
-            My journey began with curiosity about design and visual communication. In 2019, I started exploring graphic design tools, discovering how thoughtful design shapes perception and drives engagement. What began as creative exploration has evolved into a comprehensive practice spanning graphic design, motion, web development, and strategic thinking.
+            My journey began with curiosity about design and visual communication. In 2019, I started exploring graphic design, discovering how thoughtful aesthetics shape perception and drive engagement. What began as creative exploration has evolved into a comprehensive practice spanning graphic design, motion graphics, web development, WordPress, social media strategy, and strategic brand thinking.
           </p>
           
           <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
-            Over the past several years, I've worked with startups, agencies, and established brands—learning that great creative work requires both artistic excellence and strategic clarity. Every project is an opportunity to understand the client's vision, challenge assumptions, and deliver solutions that genuinely move the needle.
+            Over the past several years, I've worked with startups, agencies, and established brands across diverse industries. Each project reinforced an important lesson: great creative work requires both artistic excellence and strategic clarity. I've completed freelance projects, managed internships at creative agencies, led design teams, and continuously expanded my skillset to serve clients more comprehensively.
           </p>
 
           <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
-            In 2023, I founded Twilr Production to bring all of these skills together into a cohesive offering. Today, we work with ambitious clients on high-impact creative projects that combine beauty with business results.
+            In 2023, I founded Twilr Production to bring all of these skills together into a cohesive offering. Today, we work with ambitious clients on high-impact creative projects that combine visual beauty with strategic business thinking and measurable outcomes.
           </p>
         </div>
 
-        <h3 style="margin-bottom: 2rem;">Professional Timeline</h3>
+        <h3 style="margin-bottom: 3rem; font-size: 1.8rem;">Professional Timeline</h3>
         <div class="timeline" id="about-timeline">
           <!-- Generated by JavaScript -->
         </div>
@@ -1134,11 +1065,11 @@
         <div class="grid-2" style="margin-bottom: 4rem;">
           <div>
             <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem;">
-              Twilr Production is a full-service creative agency dedicated to helping ambitious brands tell their stories authentically. Founded in 2023, we specialize in graphic design, video production, web design, and brand strategy for clients who demand excellence.
+              Twilr Production is a full-service creative agency dedicated to helping ambitious brands tell their stories authentically. Founded in 2023, we specialize in graphic design, video production, web design, WordPress development, social media management, and comprehensive brand strategy for clients who refuse to compromise on quality.
             </p>
             
             <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
-              The name captures that magical twilight moment—infinite possibility where day meets night. It represents our approach: where strategic thinking meets creative excellence, where brand meets business, where vision becomes reality.
+              The name captures that magical twilight moment—infinite possibility where day meets night. It represents our philosophy: where strategic thinking meets creative excellence, where brand vision meets business objectives, where inspired ideas become transformative reality.
             </p>
           </div>
 
@@ -1164,17 +1095,17 @@
         </div>
 
         <div class="grid-3">
-          <div class="card p-6" onclick="openModal('vision-modal')" style="cursor: pointer;">
+          <div class="card p-6" onclick="showVisionModal()" style="cursor: pointer;">
             <p class="section-label">Vision</p>
             <h4 style="margin-bottom: 1rem;">Transform Brand Connections</h4>
             <p style="color: var(--text-secondary); line-height: 1.7;">Through creative excellence and strategic clarity, we help brands make authentic, lasting connections with their audiences.</p>
           </div>
-          <div class="card p-6" onclick="openModal('mission-modal')" style="cursor: pointer;">
+          <div class="card p-6" onclick="showMissionModal()" style="cursor: pointer;">
             <p class="section-label">Mission</p>
             <h4 style="margin-bottom: 1rem;">Deliver Strategic Solutions</h4>
             <p style="color: var(--text-secondary); line-height: 1.7;">Premium creative work that combines beauty, strategy, and business results for ambitious, discerning clients.</p>
           </div>
-          <div class="card p-6" onclick="openModal('values-modal')" style="cursor: pointer;">
+          <div class="card p-6" onclick="showValuesModal()" style="cursor: pointer;">
             <p class="section-label">Values</p>
             <h4 style="margin-bottom: 1rem;">Excellence & Authenticity</h4>
             <p style="color: var(--text-secondary); line-height: 1.7;">We believe in intentional work, strategic thinking, and solutions that actually move the needle.</p>
@@ -1270,7 +1201,7 @@
           <div class="card p-6" style="background: white;">
             <h4 style="margin-bottom: 2rem;">Send a Message</h4>
             
-            <form id="contact-form">
+            <form id="contact-form" onsubmit="handleContactSubmit(event)">
               <div class="form-group">
                 <label for="name" class="form-label">Name *</label>
                 <input type="text" id="name" name="name" required placeholder="Your full name" autocomplete="name">
@@ -1288,8 +1219,9 @@
                   <option>Graphic Design Project</option>
                   <option>Video Production</option>
                   <option>Web Design</option>
-                  <option>Brand Strategy</option>
+                  <option>WordPress Development</option>
                   <option>Social Media Management</option>
+                  <option>Brand Strategy</option>
                   <option>Collaboration</option>
                   <option>Other</option>
                 </select>
@@ -1306,32 +1238,14 @@
         </div>
       </div>
     </section>
-  </div>
-
-  <!-- 404 Page (Hidden by default) -->
-  <div id="not-found-page" class="hidden">
-    <div class="not-found-container">
-      <div class="not-found-content">
-        <div class="not-found-code">404</div>
-        <h1 class="not-found-title">Page Not Found</h1>
-        <p class="not-found-desc">
-          Sorry, the page you're looking for doesn't exist. It might have been moved or the link could be broken. Let's get you back on track.
-        </p>
-        <div class="not-found-actions">
-          <button class="btn btn-primary" onclick="navigateTo('home')">← Back to Home</button>
-          <button class="btn btn-secondary" onclick="navigateTo('portfolio')">View Portfolio</button>
-          <button class="btn btn-outline" onclick="navigateTo('contact')">Get In Touch</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <!-- Modals -->
   <div id="service-modal" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('service-modal')">
     <div class="modal">
       <div class="modal-header">
         <div id="service-modal-header"></div>
-        <button class="modal-close" onclick="closeModal('service-modal')">&times;</button>
+        <button class="modal-close" onclick="closeModal('service-modal')" aria-label="Close modal">&times;</button>
       </div>
       <div class="modal-body" id="service-modal-content"></div>
     </div>
@@ -1341,7 +1255,7 @@
     <div class="modal">
       <div class="modal-header">
         <div id="project-modal-header"></div>
-        <button class="modal-close" onclick="closeModal('project-modal')">&times;</button>
+        <button class="modal-close" onclick="closeModal('project-modal')" aria-label="Close modal">&times;</button>
       </div>
       <div class="modal-body" id="project-modal-content"></div>
     </div>
@@ -1351,14 +1265,14 @@
     <div class="modal">
       <div class="modal-header">
         <h3>Our Vision</h3>
-        <button class="modal-close" onclick="closeModal('vision-modal')">&times;</button>
+        <button class="modal-close" onclick="closeModal('vision-modal')" aria-label="Close modal">&times;</button>
       </div>
       <div class="modal-body">
-        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem;">
           Transform how brands connect with their audiences through creative excellence and strategic clarity.
         </p>
-        <p style="color: var(--text-secondary); line-height: 1.8;">
-          We envision a future where every brand has access to world-class creative solutions that combine artistic beauty with strategic business thinking. Our goal is to be the trusted creative partner for ambitious companies that refuse to compromise on quality.
+        <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1rem;">
+          We envision a future where every brand has access to world-class creative solutions that combine artistic beauty with strategic business thinking. Our goal is to be the trusted creative partner for ambitious companies that refuse to compromise on quality and effectiveness.
         </p>
       </div>
     </div>
@@ -1368,14 +1282,14 @@
     <div class="modal">
       <div class="modal-header">
         <h3>Our Mission</h3>
-        <button class="modal-close" onclick="closeModal('mission-modal')">&times;</button>
+        <button class="modal-close" onclick="closeModal('mission-modal')" aria-label="Close modal">&times;</button>
       </div>
       <div class="modal-body">
-        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem;">
+        <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; font-size: 1.05rem;">
           Deliver premium creative solutions that combine beauty, strategy, and measurable business results.
         </p>
-        <p style="color: var(--text-secondary); line-height: 1.8;">
-          Every project we undertake is guided by a commitment to understanding our clients' business objectives and delivering creative work that drives real outcomes. We believe in strategic thinking paired with artistic excellence.
+        <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1rem;">
+          Every project we undertake is guided by a commitment to understanding our clients' business objectives and delivering creative work that drives real outcomes. We believe in strategic thinking paired with artistic excellence—creating work that looks beautiful and performs even better.
         </p>
       </div>
     </div>
@@ -1385,25 +1299,25 @@
     <div class="modal">
       <div class="modal-header">
         <h3>Our Values</h3>
-        <button class="modal-close" onclick="closeModal('values-modal')">&times;</button>
+        <button class="modal-close" onclick="closeModal('values-modal')" aria-label="Close modal">&times;</button>
       </div>
       <div class="modal-body">
         <div style="margin-bottom: 2rem;">
           <h5 style="margin-bottom: 0.5rem; color: var(--accent);">Excellence</h5>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
-            We never compromise on quality. Every pixel, every word, every decision reflects our commitment to excellence.
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+            We never compromise on quality. Every pixel, every word, every decision reflects our commitment to delivering exceptional work that stands out and endures.
           </p>
         </div>
         <div style="margin-bottom: 2rem;">
           <h5 style="margin-bottom: 0.5rem; color: var(--accent);">Authenticity</h5>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
-            We believe in honest, authentic work that reflects the true nature of our clients' brands.
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+            We believe in honest, authentic work that reflects the true nature of our clients' brands and resonates genuinely with their audiences.
           </p>
         </div>
         <div>
           <h5 style="margin-bottom: 0.5rem; color: var(--accent);">Strategy</h5>
-          <p style="color: var(--text-secondary); line-height: 1.7;">
-            Creative work without strategy is just art. We combine both to deliver results that matter.
+          <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
+            Creative work without strategy is just art. We combine both to deliver results that matter—work that's beautiful, functional, and moves business forward.
           </p>
         </div>
       </div>
@@ -1416,17 +1330,17 @@
       <div class="footer-section">
         <h4>Twilr Production</h4>
         <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
-          Creative agency specializing in design, video, web, and strategy for ambitious brands.
+          Creative agency specializing in design, video, web, and strategy for ambitious brands that demand excellence.
         </p>
       </div>
       <div class="footer-section">
         <h4>Quick Links</h4>
         <div class="footer-links">
-          <a class="footer-link" onclick="navigateTo('home')">Home</a>
-          <a class="footer-link" onclick="navigateTo('about')">About</a>
-          <a class="footer-link" onclick="navigateTo('services')">Services</a>
-          <a class="footer-link" onclick="navigateTo('portfolio')">Portfolio</a>
-          <a class="footer-link" onclick="navigateTo('contact')">Contact</a>
+          <a class="footer-link" onclick="scrollToSection('home')">Home</a>
+          <a class="footer-link" onclick="scrollToSection('about')">About</a>
+          <a class="footer-link" onclick="scrollToSection('services')">Services</a>
+          <a class="footer-link" onclick="scrollToSection('portfolio')">Portfolio</a>
+          <a class="footer-link" onclick="scrollToSection('contact')">Contact</a>
         </div>
       </div>
       <div class="footer-section">
@@ -1446,52 +1360,42 @@
   </footer>
 
   <script>
-    // Configuration
-    const defaultConfig = {
-      hero_headline: "Sushant Budha Chhetri",
-      hero_tagline: "Founder of Twilr Production. I craft compelling visual experiences and strategic creative solutions for ambitious brands that demand excellence."
-    };
-
-    let config = { ...defaultConfig };
-    let contactSubmissions = [];
-    let currentPage = 'home';
-
     // Data
     const aboutTimeline = [
       {
         date: "2019",
         title: "Creative Discovery",
-        description: "Started exploring graphic design, discovering the power of visual communication. Built foundational skills in Adobe Creative Suite.",
+        description: "Started exploring graphic design and visual communication. Discovered passion for translating ideas into compelling visuals.",
         tags: ["Design", "Learning"],
-        details: "Completed first personal projects and started learning professional design workflows. This was the foundation for everything that followed."
+        details: "Completed first personal projects and started learning professional Adobe Creative Suite workflows. Built foundational skills in logo design, branding, and marketing materials."
       },
       {
         date: "2020",
         title: "Freelance Beginnings",
-        description: "Launched freelance design practice. Completed 20+ projects for diverse clients including local businesses and startups.",
+        description: "Launched independent freelance design practice. Completed 20+ projects for startups and local businesses.",
         tags: ["Freelance", "Branding"],
-        details: "Built portfolio and client base. Learned project management, client communication, and business fundamentals through real-world projects."
+        details: "Built professional portfolio and client base. Learned project management, client communication, and business fundamentals. Specialized in logo design and brand identity."
       },
       {
         date: "2021",
         title: "Skill Expansion",
-        description: "Mastered video editing, WordPress development, and social media management. Scaled to 10+ active clients.",
+        description: "Mastered video editing, WordPress web development, and social media management. Scaled to 10+ active clients.",
         tags: ["Video", "Web", "Social"],
-        details: "Diversified skill set to offer comprehensive services. Invested in learning new platforms and staying current with industry trends."
+        details: "Diversified service offerings to meet diverse client needs. Invested in learning Premiere Pro, After Effects, WordPress, and Meta Business Suite. Began managing social media for multiple brands."
       },
       {
         date: "2022",
         title: "Leadership & Strategy",
-        description: "Led creative teams at agencies. Managed complex projects and developed strategic campaigns.",
+        description: "Led creative teams at digital agencies. Managed complex projects and developed strategic campaigns for enterprise clients.",
         tags: ["Leadership", "Strategy"],
-        details: "Transitioned from solo freelancer to team leadership. Gained valuable experience in project management and creative direction."
+        details: "Transitioned to agency environment and team leadership roles. Gained experience in project management, creative direction, team mentoring, and strategic campaign development."
       },
       {
         date: "2023",
         title: "Twilr Production Founded",
-        description: "Established full-service creative agency combining all expertise into cohesive offering. Focus on strategic, high-impact work.",
+        description: "Established full-service creative agency combining all expertise. Focus on strategic, high-impact work for ambitious brands.",
         tags: ["Founder", "Agency"],
-        details: "Built agency with clear vision and mission. Assembled team, established processes, and began working with ambitious brands."
+        details: "Founded Twilr Production with clear vision and mission. Built agency processes, portfolio, and brand. Currently working with 30+ active clients on premium creative projects."
       }
     ];
 
@@ -1499,37 +1403,37 @@
       {
         date: "2019-2020",
         title: "Graphic Design Freelancer",
-        description: "Started freelance journey with focus on logo design and brand identity. Completed 20+ projects.",
+        description: "Independent freelance graphic designer specializing in logo design and brand identity for startups and small businesses.",
         tags: ["Freelance", "Design"],
-        details: "Built portfolio and established reputation for quality work. Worked with local businesses and creative startups."
+        details: "Built portfolio through diverse design projects. Clients included local businesses, creative startups, and e-commerce brands. Established reputation for quality work."
       },
       {
         date: "2020-2021",
         title: "Video Editor & Content Creator",
-        description: "Expanded services to video production and social content. Managed social media for 10+ brands.",
+        description: "Expanded services to professional video production and social media content creation for diverse brands.",
         tags: ["Video", "Motion", "Content"],
-        details: "Produced 100+ videos for various clients. Managed social media strategy and content calendars for multiple platforms."
+        details: "Produced 100+ videos across various platforms. Managed social media strategy and content calendars for 10+ brands. Specialized in promotional videos and social content."
       },
       {
         date: "2021-2022",
-        title: "Web Developer Internship",
-        description: "Completed intensive internship at creative agency. Mastered WordPress and frontend development.",
-        tags: ["WordPress", "Web", "Internship"],
-        details: "Built 15+ client websites. Learned professional development workflows, hosting, and performance optimization."
+        title: "WordPress Developer & Web Designer",
+        description: "Completed intensive training and projects in WordPress development and web design. Built custom websites for multiple clients.",
+        tags: ["WordPress", "Web", "Development"],
+        details: "Built 15+ custom WordPress websites. Mastered WooCommerce, plugin integration, hosting, performance optimization, and SEO best practices."
       },
       {
         date: "2022-2023",
         title: "Creative Director",
-        description: "Led creative department at digital agency. Managed designer teams and directed strategic campaigns.",
+        description: "Led creative department at digital agency. Directed designer teams and created strategic campaigns for major brands.",
         tags: ["Leadership", "Direction", "Strategy"],
-        details: "Oversaw all creative projects. Mentored junior designers and developed brand strategies for major clients."
+        details: "Oversaw all creative projects. Mentored junior designers. Developed brand strategies and directed major campaigns for enterprise clients."
       },
       {
         date: "2023-Present",
         title: "Founder, Twilr Production",
-        description: "Established and scaled full-service creative agency. 30+ active clients and 50+ delivered projects.",
+        description: "Founded and scaled full-service creative agency. Serving 30+ active clients with premium creative solutions.",
         tags: ["Founder", "Leadership", "Agency"],
-        details: "Built agency from ground up. Focused on strategic work for ambitious brands. Assembled talented team."
+        details: "Built agency from ground up. Focused on strategic, high-impact work. Currently delivering 50+ projects with 30+ active clients across all service areas."
       }
     ];
 
@@ -1539,8 +1443,8 @@
         title: "Graphic Design",
         subtitle: "Visual identity and brand excellence",
         icon: "✎",
-        description: "Strategic visual design that communicates your brand message with clarity and elegance. From logos and brand systems to marketing collateral.",
-        workflow: ["Brand discovery", "Concept development", "Design exploration", "Refinement", "Final delivery"],
+        description: "Strategic visual design that communicates your brand message with clarity and elegance. From logos and brand systems to marketing collateral and promotional materials.",
+        workflow: ["Brand discovery", "Concept development", "Design exploration", "Refinement & feedback", "Final delivery"],
         tools: "Adobe Illustrator • Figma • Adobe Photoshop • InDesign",
         deliverables: "Logos • Brand systems • Print materials • Packaging • Marketing collateral",
         timeline: "2019-Present"
@@ -1550,10 +1454,10 @@
         title: "Video Production",
         subtitle: "Cinematic storytelling with impact",
         icon: "▶",
-        description: "Professional video production and post-production from concept to final delivery. Motion graphics, color grading, sound design.",
-        workflow: ["Concept & storyboarding", "Filming", "Color grading", "Motion graphics", "Sound design", "Final export"],
+        description: "Professional video production and post-production from concept to final delivery. Motion graphics, color grading, sound design, and complete production.",
+        workflow: ["Concept & storyboarding", "Pre-production planning", "Filming", "Color grading", "Motion graphics", "Sound design", "Final export"],
         tools: "Premiere Pro • After Effects • DaVinci Resolve • Audition",
-        deliverables: "Promotional videos • Social content • Corporate videos • Motion graphics",
+        deliverables: "Promotional videos • Social content • Corporate videos • Motion graphics • Animations",
         timeline: "2020-Present"
       },
       {
@@ -1561,10 +1465,10 @@
         title: "Web Design",
         subtitle: "Digital experiences that convert",
         icon: "⌐",
-        description: "Custom-designed, high-performing websites combining beautiful aesthetics with strategic user experience. Responsive and optimized for conversions.",
-        workflow: ["Strategy & discovery", "Wireframing", "Design", "Development", "Testing", "Launch"],
-        tools: "WordPress • Figma • HTML/CSS • JavaScript",
-        deliverables: "Custom WordPress sites • Landing pages • E-commerce stores • Portfolio sites",
+        description: "Custom-designed, high-performing websites combining beautiful aesthetics with strategic user experience. Responsive, optimized, and conversion-focused.",
+        workflow: ["Strategy & discovery", "Wireframing & UX", "Visual design", "Development", "Testing & QA", "Launch & optimization"],
+        tools: "WordPress • Figma • HTML/CSS • JavaScript • Elementor",
+        deliverables: "Custom WordPress sites • Landing pages • E-commerce stores • Portfolio sites • Web applications",
         timeline: "2021-Present"
       },
       {
@@ -1572,10 +1476,10 @@
         title: "Social Media Management",
         subtitle: "Strategic content and community building",
         icon: "◉",
-        description: "Comprehensive social strategy including content creation, community management, growth strategy, and performance analytics.",
-        workflow: ["Audit & strategy", "Content planning", "Design & creation", "Scheduling", "Community management", "Analytics"],
-        tools: "Meta Suite • Later • Canva • Google Analytics",
-        deliverables: "Content strategy • Post designs • Growth campaigns • Community management",
+        description: "Comprehensive social strategy including content creation, community management, growth strategy, and performance analytics across all major platforms.",
+        workflow: ["Audit & strategy", "Content planning", "Design & creation", "Scheduling & posting", "Community management", "Analytics & reporting"],
+        tools: "Meta Business Suite • Later • Canva • Google Analytics • Buffer",
+        deliverables: "Content strategy • Post designs • Growth campaigns • Community management • Analytics reports",
         timeline: "2020-Present"
       },
       {
@@ -1583,10 +1487,10 @@
         title: "Brand Strategy",
         subtitle: "Authentic positioning and messaging",
         icon: "★",
-        description: "Strategic brand development including positioning, identity, voice, visual language, and comprehensive brand guidelines.",
-        workflow: ["Discovery workshop", "Market research", "Positioning", "Identity design", "Guidelines", "Implementation"],
-        tools: "Strategic frameworks • Research • Brand workshops",
-        deliverables: "Brand strategy • Positioning • Visual identity • Brand guidelines",
+        description: "Strategic brand development including positioning, identity, voice, visual language, and comprehensive brand guidelines for lasting impact.",
+        workflow: ["Discovery workshop", "Market research", "Positioning & messaging", "Identity design", "Brand guidelines", "Implementation support"],
+        tools: "Strategic frameworks • Research • Brand workshops • Competitor analysis",
+        deliverables: "Brand strategy • Positioning statement • Visual identity • Brand guidelines • Implementation roadmap",
         timeline: "2019-Present"
       },
       {
@@ -1594,10 +1498,10 @@
         title: "Creative Direction",
         subtitle: "Strategic vision and execution",
         icon: "◊",
-        description: "End-to-end creative direction for campaigns and integrated initiatives. Combining strategic thinking with creative excellence.",
-        workflow: ["Brief & strategy", "Concept development", "Creative direction", "Team coordination", "Quality assurance", "Launch"],
-        tools: "Strategic planning • Team leadership • Project management",
-        deliverables: "Campaign concepts • Creative briefs • Art direction • Launch coordination",
+        description: "End-to-end creative direction for campaigns and integrated initiatives. Combining strategic thinking with creative excellence for maximum impact.",
+        workflow: ["Brief & strategy", "Concept development", "Creative direction", "Team coordination", "Quality assurance", "Launch & optimization"],
+        tools: "Strategic planning • Team leadership • Project management • Brand guidelines",
+        deliverables: "Campaign concepts • Creative briefs • Art direction • Launch coordination • Performance optimization",
         timeline: "2022-Present"
       }
     ];
@@ -1609,11 +1513,11 @@
         category: "branding",
         description: "Complete brand identity for B2B tech startup",
         emoji: "🎨",
-        details: "Developed comprehensive brand identity including logo system, color palette, typography, photography style, and 80-page brand guidelines.",
+        details: "Developed comprehensive brand identity including logo system, color palette, custom typography, photography style guide, and 80-page brand guidelines.",
         role: "Lead Brand Designer",
         year: "2023",
-        tools: "Adobe Illustrator • Figma • Brand Guidelines",
-        outcomes: ["Logo system with 10+ variations", "Complete 80-page brand guidelines", "Marketing templates", "Successful market positioning"]
+        tools: "Adobe Illustrator • Figma • Brand Strategy",
+        outcomes: ["Logo system with 10+ variations", "80-page brand guidelines", "Marketing templates", "Successful market positioning"]
       },
       {
         id: "bloom-cafe",
@@ -1621,11 +1525,11 @@
         category: "web",
         description: "Modern responsive website with reservation system",
         emoji: "🌐",
-        details: "Designed and developed fully responsive website featuring menu showcase, online ordering, and table reservation system.",
+        details: "Designed and developed fully responsive website featuring menu showcase, online ordering system, table reservation, and customer testimonials.",
         role: "Web Designer & Developer",
         year: "2023",
-        tools: "WordPress • Elementor • WooCommerce • Stripe",
-        outcomes: ["Fully responsive design", "Mobile optimization", "200% increase in online orders", "Improved engagement"]
+        tools: "WordPress • Elementor • WooCommerce • Stripe Integration",
+        outcomes: ["Fully responsive design", "Mobile optimization", "200% increase in online orders", "Improved customer engagement"]
       },
       {
         id: "fitlife-social",
@@ -1633,7 +1537,7 @@
         category: "social",
         description: "Comprehensive social media campaign and strategy",
         emoji: "📱",
-        details: "Managed complete social media strategy for fitness brand across Instagram, TikTok, YouTube, and Facebook.",
+        details: "Managed complete social media strategy for fitness brand across Instagram, TikTok, YouTube, and Facebook with consistent content calendar.",
         role: "Social Media Strategist",
         year: "2023",
         tools: "Meta Suite • Canva • Later • Google Analytics",
@@ -1645,11 +1549,11 @@
         category: "video",
         description: "Professional 60-second promotional video",
         emoji: "🎬",
-        details: "Created engaging promotional video with color grading, motion graphics, sound design, and animation.",
+        details: "Created engaging promotional video with cinematic cinematography, professional color grading, motion graphics, sound design, and smooth animations.",
         role: "Video Editor & Motion Designer",
         year: "2023",
-        tools: "Premiere Pro • After Effects • DaVinci Resolve",
-        outcomes: ["100K+ views", "High engagement rate", "Featured at launch", "Industry recognition"]
+        tools: "Premiere Pro • After Effects • DaVinci Resolve • Audition",
+        outcomes: ["100K+ views", "High engagement rate", "Featured at product launch", "Industry recognition"]
       },
       {
         id: "artisan-brand",
@@ -1657,10 +1561,10 @@
         category: "branding",
         description: "Luxury brand identity for handcrafted goods",
         emoji: "✨",
-        details: "Created sophisticated brand identity with logo, color palette, custom typography, and complete brand system.",
+        details: "Created sophisticated brand identity including logo, color palette, custom typography, packaging design, and complete brand system.",
         role: "Brand Designer",
         year: "2022",
-        tools: "Adobe Illustrator • Figma • InDesign",
+        tools: "Adobe Illustrator • Figma • InDesign • Photography",
         outcomes: ["Premium visual identity", "Cohesive brand system", "Print & digital assets", "Justified premium pricing"]
       },
       {
@@ -1669,37 +1573,16 @@
         category: "web",
         description: "High-performance portfolio for creative studio",
         emoji: "🖼",
-        details: "Designed and developed fast-loading, SEO-optimized portfolio website with case study pages and testimonials.",
+        details: "Designed and developed fast-loading, SEO-optimized portfolio website with case study pages, testimonials, and contact forms.",
         role: "Web Designer & Developer",
         year: "2022",
-        tools: "WordPress • Custom Development • Figma",
+        tools: "WordPress • Custom Development • Figma • SEO Optimization",
         outcomes: ["50% increase in inquiries", "2.1s load time", "SEO optimized", "Award nomination"]
       }
     ];
 
-    // Element SDK
-    if (window.elementSdk) {
-      window.elementSdk.init({
-        defaultConfig,
-        onConfigChange: (newConfig) => {
-          config = { ...defaultConfig, ...newConfig };
-          const headline = document.querySelector('.hero-headline');
-          if (headline) headline.textContent = config.hero_headline;
-          const tagline = document.querySelector('.hero-tagline');
-          if (tagline) tagline.textContent = config.hero_tagline;
-        },
-        mapToCapabilities: () => ({
-          recolorables: [],
-          borderables: [],
-          fontEditable: undefined,
-          fontSizeable: undefined
-        }),
-        mapToEditPanelValues: (cfg) => new Map([
-          ['hero_headline', cfg.hero_headline || defaultConfig.hero_headline],
-          ['hero_tagline', cfg.hero_tagline || defaultConfig.hero_tagline]
-        ])
-      });
-    }
+    // Initialization
+    let contactSubmissions = [];
 
     // Data SDK
     if (window.dataSdk) {
@@ -1711,24 +1594,12 @@
     }
 
     // Utility Functions
-    function navigateTo(sectionId) {
-      if (sectionId === '404') {
-        showPage('not-found');
-        return;
-      }
-      showPage('main-content');
-      currentPage = sectionId;
+    function scrollToSection(sectionId) {
+      closeMenuMobile();
       const element = document.getElementById(sectionId);
       if (element) {
-        closeMenuMobile();
         element.scrollIntoView({ behavior: 'smooth' });
       }
-    }
-
-    function showPage(pageId) {
-      document.getElementById('main-content').classList.toggle('hidden', pageId !== 'main-content');
-      document.getElementById('not-found-page').classList.toggle('hidden', pageId !== 'not-found');
-      document.getElementById('navbar').style.display = pageId === 'main-content' ? 'fixed' : 'none';
     }
 
     function closeMenuMobile() {
@@ -1774,33 +1645,14 @@
       if (!container) return;
       
       container.innerHTML = aboutTimeline.map((item, index) => `
-        <div class="timeline-item" style="animation-delay: ${index * 0.1}s;">
-          <div class="timeline-dot" onclick="openModal('timeline-modal-${index}')" role="button" tabindex="0"></div>
-          <div class="timeline-content" onclick="openModal('timeline-modal-${index}')" role="button" tabindex="0">
+        <div class="timeline-item">
+          <div class="timeline-dot" role="button" tabindex="0"></div>
+          <div class="timeline-content">
             <div class="timeline-date">${item.date}</div>
             <div class="timeline-title">${item.title}</div>
             <div class="timeline-description">${item.description}</div>
             <div class="timeline-tags">
               ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
-            </div>
-          </div>
-        </div>
-
-        <div id="timeline-modal-${index}" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('timeline-modal-${index}')">
-          <div class="modal">
-            <div class="modal-header">
-              <div>
-                <h3>${item.title}</h3>
-                <p style="color: var(--accent); font-weight: 600; margin-top: 0.5rem;">${item.date}</p>
-              </div>
-              <button class="modal-close" onclick="closeModal('timeline-modal-${index}')">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">${item.description}</p>
-              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">${item.details}</p>
-              <div class="timeline-tags">
-                ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
-              </div>
             </div>
           </div>
         </div>
@@ -1812,33 +1664,14 @@
       if (!container) return;
       
       container.innerHTML = experienceTimeline.map((item, index) => `
-        <div class="timeline-item" style="animation-delay: ${index * 0.1}s;">
-          <div class="timeline-dot" onclick="openModal('exp-modal-${index}')" role="button" tabindex="0"></div>
-          <div class="timeline-content" onclick="openModal('exp-modal-${index}')" role="button" tabindex="0">
+        <div class="timeline-item">
+          <div class="timeline-dot" role="button" tabindex="0"></div>
+          <div class="timeline-content">
             <div class="timeline-date">${item.date}</div>
             <div class="timeline-title">${item.title}</div>
             <div class="timeline-description">${item.description}</div>
             <div class="timeline-tags">
               ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
-            </div>
-          </div>
-        </div>
-
-        <div id="exp-modal-${index}" class="modal-overlay hidden" onclick="if(event.target === this) closeModal('exp-modal-${index}')">
-          <div class="modal">
-            <div class="modal-header">
-              <div>
-                <h3>${item.title}</h3>
-                <p style="color: var(--accent); font-weight: 600; margin-top: 0.5rem;">${item.date}</p>
-              </div>
-              <button class="modal-close" onclick="closeModal('exp-modal-${index}')">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">${item.description}</p>
-              <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">${item.details}</p>
-              <div class="timeline-tags">
-                ${item.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
-              </div>
             </div>
           </div>
         </div>
@@ -1853,7 +1686,7 @@
         <div class="card service-card" onclick="openServiceModal(${index})" style="animation: fadeInUp 0.6s ease-out ${index * 0.1}s forwards; opacity: 0;">
           <div class="service-icon">${service.icon}</div>
           <h4 class="service-title">${service.title}</h4>
-          <p style="color: var(--text-secondary); margin-bottom: 1rem;">${service.subtitle}</p>
+          <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">${service.subtitle}</p>
           <p class="service-desc">${service.description}</p>
           <button class="service-arrow" style="background: none; border: none; cursor: pointer; padding: 0;">
             Learn More <span>→</span>
@@ -1886,7 +1719,7 @@
       grid.innerHTML = portfolioData.map((project, index) => `
         <div class="card portfolio-card" data-category="${project.category}" onclick="openProjectModal(${index})" style="animation: fadeInUp 0.6s ease-out ${index * 0.1}s forwards; opacity: 0; cursor: pointer;">
           <div class="portfolio-image">${project.emoji}</div>
-          <div style="padding: 1.5rem;">
+          <div style="padding: 1.5rem; padding-top: 0;">
             <p class="portfolio-category">${project.category}</p>
             <h5 class="portfolio-title">${project.title}</h5>
             <p class="portfolio-desc">${project.description}</p>
@@ -1935,18 +1768,18 @@
         <div class="grid-2" style="margin-top: 2rem; gap: 2rem;">
           <div>
             <h5 style="margin-bottom: 1rem;">Tools & Platforms</h5>
-            <p style="color: var(--text-secondary); line-height: 1.7;">${service.tools}</p>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">${service.tools}</p>
           </div>
           <div>
             <h5 style="margin-bottom: 1rem;">What You'll Receive</h5>
-            <p style="color: var(--text-secondary); line-height: 1.7;">${service.deliverables}</p>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">${service.deliverables}</p>
           </div>
         </div>
 
         <div style="background: var(--accent-light); padding: 2rem; border-radius: 8px; margin-top: 2rem; border: 1px solid var(--accent);">
           <p style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Ready to Start?</p>
           <p style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.7;">Let's discuss how this service can elevate your project and deliver results.</p>
-          <button class="btn btn-primary" onclick="closeModal('service-modal'); navigateTo('contact');">Get In Touch</button>
+          <button class="btn btn-primary" onclick="closeModal('service-modal'); scrollToSection('contact');">Get In Touch</button>
         </div>
       `;
 
@@ -1967,87 +1800,95 @@
         <div class="grid-2" style="gap: 2rem; margin-bottom: 2rem;">
           <div>
             <h5 style="margin-bottom: 1rem; color: var(--text-primary);">Project Overview</h5>
-            <p style="color: var(--text-secondary); line-height: 1.8;">${project.details}</p>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">${project.details}</p>
           </div>
           <div style="background: var(--neutral-100); padding: 1.5rem; border-radius: 8px;">
             <div style="margin-bottom: 1.5rem;">
               <p class="section-label">Role</p>
-              <p style="color: var(--text-primary); font-weight: 500;">${project.role}</p>
+              <p style="color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">${project.role}</p>
             </div>
             <div style="margin-bottom: 1.5rem;">
               <p class="section-label">Year</p>
-              <p style="color: var(--text-primary); font-weight: 500;">${project.year}</p>
+              <p style="color: var(--text-primary); font-weight: 500; font-size: 0.95rem;">${project.year}</p>
             </div>
             <div>
               <p class="section-label">Tools</p>
-              <p style="color: var(--text-secondary); font-size: 0.95rem;">${project.tools}</p>
+              <p style="color: var(--text-secondary); font-size: 0.9rem;">${project.tools}</p>
             </div>
           </div>
         </div>
 
         <h5 style="margin-bottom: 1rem; margin-top: 2rem;">Key Outcomes</h5>
         <ul style="margin: 0; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
-          ${project.outcomes.map(outcome => `<li style="margin-bottom: 0.75rem;">${outcome}</li>`).join('')}
+          ${project.outcomes.map(outcome => `<li style="margin-bottom: 0.75rem; font-size: 0.95rem;">${outcome}</li>`).join('')}
         </ul>
 
         <div style="background: var(--accent-light); padding: 2rem; border-radius: 8px; margin-top: 2rem; border: 1px solid var(--accent); text-align: center;">
           <p style="font-size: 0.85rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Interested?</p>
           <p style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 0.95rem;">Like what you see? Let's discuss how I can deliver similar results for your project.</p>
-          <button class="btn btn-primary" onclick="closeModal('project-modal'); navigateTo('contact');">Start a Project</button>
+          <button class="btn btn-primary" onclick="closeModal('project-modal'); scrollToSection('contact');">Start a Project</button>
         </div>
       `;
 
       openModal('project-modal');
     }
 
+    function showVisionModal() {
+      openModal('vision-modal');
+    }
+
+    function showMissionModal() {
+      openModal('mission-modal');
+    }
+
+    function showValuesModal() {
+      openModal('values-modal');
+    }
+
     // Contact Form
-    function setupContactForm() {
+    async function handleContactSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const inquiry_type = document.getElementById('inquiry').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        showToast('Please fill in all required fields.', 'error');
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showToast('Please enter a valid email address.', 'error');
+        return;
+      }
+
       const form = document.getElementById('contact-form');
-      if (!form) return;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
 
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const inquiry_type = document.getElementById('inquiry').value;
-        const message = document.getElementById('message').value.trim();
+      if (window.dataSdk && contactSubmissions.length < 999) {
+        const result = await window.dataSdk.create({
+          name,
+          email,
+          inquiry_type,
+          message,
+          submittedAt: new Date().toISOString()
+        });
 
-        if (!name || !email || !message) {
-          showToast('Please fill in all required fields.', 'error');
-          return;
+        btn.disabled = false;
+        btn.textContent = 'Send Message';
+
+        if (result.isOk) {
+          showToast('Message sent successfully! I\'ll be in touch soon.', 'success');
+          form.reset();
+        } else {
+          showToast('Failed to send message. Please try again.', 'error');
         }
-
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-          showToast('Please enter a valid email address.', 'error');
-          return;
-        }
-
-        if (window.dataSdk && contactSubmissions.length < 999) {
-          const btn = form.querySelector('button[type="submit"]');
-          btn.disabled = true;
-          btn.textContent = 'Sending...';
-
-          const result = await window.dataSdk.create({
-            name,
-            email,
-            inquiry_type,
-            message,
-            submittedAt: new Date().toISOString()
-          });
-
-          btn.disabled = false;
-          btn.textContent = 'Send Message';
-
-          if (result.isOk) {
-            showToast('Message sent successfully! I\'ll be in touch soon.', 'success');
-            form.reset();
-          } else {
-            showToast('Failed to send message. Please try again.', 'error');
-          }
-        }
-      });
+      }
     }
 
     // Navigation Setup
@@ -2071,26 +1912,7 @@
       });
     }
 
-    // Scroll Animation Observer
-    function setupScrollAnimations() {
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
-    }
-
-    // Keyboard Navigation for Modals
+    // Keyboard Navigation
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         document.querySelectorAll('.modal-overlay').forEach(modal => {
@@ -2104,13 +1926,11 @@
     // Initialize
     document.addEventListener('DOMContentLoaded', () => {
       setupNavigation();
-      setupContactForm();
       renderAboutTimeline();
       renderExperienceTimeline();
       renderServices();
       renderPortfolio();
-      setupScrollAnimations();
     });
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cf43d60c4224365',t:'MTc3MTMyMDM1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cf4dbb934694365',t:'MTc3MTMyNjgzNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
